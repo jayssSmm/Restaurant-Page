@@ -2,18 +2,26 @@ import path from "node:path";
 import HtmlWebpackPlugin from "html-webpack-plugin";
 
 export default {
-    mode: "development",
+    mode: "production",
     entry: "./src/index.js",
     output: {
         filename: "main.js",
         path: path.resolve(import.meta.dirname, "dist"),
         clean: true,
     },
-    devtool: "eval-source-map",
     plugins: [
         new HtmlWebpackPlugin({
             template: "./src/template.html",
+            filename: "index.html",
         }),
+        new HtmlWebpackPlugin({
+            template: "./src/menu.html",
+            filename: "menu.html",
+        }),
+        new HtmlWebpackPlugin({
+            template: "./src/contact.html",
+            filename: "contact.html"
+        })
     ],
     module:{
         rules:[

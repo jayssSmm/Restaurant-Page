@@ -1,51 +1,158 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ember & Salt</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Work+Sans:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    
-    <div id="header">
-        <nav>
-            Tiffin
-        </nav>
-        <header>
-            <nav>
-                <button>Home</button>
-                <button>Menu</button>
-                <button>Contact</button>
-            </nav>
-        </header>
-        <nav>
-            Login
-        </nav>
+
+  <header class="site-header">
+    <div class="wordmark">
+      <span class="wordmark-cut">✦</span>
+      Ember <span class="amp">&amp;</span> Salt
     </div>
+    <nav>
+      <a class="nav-link is-active" href="index.html">Home</a>
+      <a class="nav-link" href="menu.html">Menu</a>
+      <a class="nav-link" href="contact.html">Contact</a>
+    </nav>
+  </header>
 
-        <div id="content">
-            <div id="tiffin">Ember & Salt </div>
+  <main>
 
-            <div class="sniglet-regular card">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                Libero atque similique quasi. Nisi libero 
-                perspiciatis laborum, suscipit, ex illo porro 
-                error facere adipisci cumque voluptatibus nulla 
-                voluptas eius ad aspernatur.
-            </div>
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Wood&#8209;fired &middot; Hand&#8209;salted</p>
+        <h1 class="headline">Ember <span class="amp">&amp;</span> Salt</h1>
+        <p class="lede">
+          We cook over real flame and finish with nothing but salt —
+          because a good cut of meat, a ripe vegetable, or a fresh catch
+          doesn't need to hide behind a sauce. Every plate that leaves
+          our kitchen has touched fire.
+        </p>
+        <button class="cta">View the Menu <span aria-hidden="true">&rarr;</span></button>
+      </div>
 
-            <div id="hours" class="sniglet-regular card">
-                <div class="hour">Sunday: 8am - 8pm</div>
-                <div class="hour">Monday: 6am - 6pm</div>
-                <div class="hour">Tuesday: 6am - 6pm</div>
-                <div class="hour">Wednesday: 6am - 6pm</div>
-                <div class="hour">Thursday: 6am - 10pm</div>
-                <div class="hour">Friday: 6am - 10pm</div>
-                <div class="hour">Saturday: 8am - 10pm</div>
-            </div>
+      <div class="hero-art" aria-hidden="true">
+        <svg viewBox="0 0 480 480" xmlns="http://www.w3.org/2000/svg" class="skillet-svg">
+          <defs>
+            <radialGradient id="glow" cx="50%" cy="38%" r="55%">
+              <stop offset="0%" stop-color="#FF6A3D" stop-opacity="0.45"/>
+              <stop offset="45%" stop-color="#FF6A3D" stop-opacity="0.18"/>
+              <stop offset="100%" stop-color="#FF6A3D" stop-opacity="0"/>
+            </radialGradient>
+            <linearGradient id="ironGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+              <stop offset="0%" stop-color="#5A5048"/>
+              <stop offset="100%" stop-color="#3A332C"/>
+            </linearGradient>
+            <linearGradient id="emberBar" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stop-color="#E8A33D"/>
+              <stop offset="100%" stop-color="#FF6A3D"/>
+            </linearGradient>
+            <linearGradient id="steakGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#B14A28"/>
+              <stop offset="100%" stop-color="#7A331D"/>
+            </linearGradient>
+          </defs>
 
-            <div class="sniglet-regular card">Location: 123 Forest Drive, Forestville, Maine</div>
+          <ellipse cx="240" cy="190" rx="220" ry="180" fill="url(#glow)"/>
+
+          <g class="embers">
+            <circle class="ember e1" cx="150" cy="120" r="4" fill="#FF9457"/>
+            <circle class="ember e2" cx="330" cy="90"  r="3" fill="#E8A33D"/>
+            <circle class="ember e3" cx="260" cy="70"  r="5" fill="#FF6A3D"/>
+            <circle class="ember e4" cx="190" cy="60"  r="3" fill="#FF9457"/>
+            <circle class="ember e5" cx="300" cy="140" r="2.5" fill="#E8A33D"/>
+          </g>
+
+          <ellipse cx="240" cy="330" rx="150" ry="26" fill="#120D0A" opacity="0.35"/>
+
+          <rect x="380" y="300" width="90" height="22" rx="11" fill="url(#ironGrad)"/>
+          <rect x="378" y="294" width="26" height="34" rx="10" fill="url(#ironGrad)"/>
+
+          <ellipse cx="240" cy="300" rx="155" ry="60" fill="url(#ironGrad)"/>
+          <ellipse cx="240" cy="292" rx="130" ry="46" fill="#241C16"/>
+
+          <g>
+            <ellipse cx="215" cy="286" rx="68" ry="30" fill="url(#steakGrad)"/>
+            <g stroke="#3D170C" stroke-width="2.5" stroke-linecap="round" opacity="0.75">
+              <path d="M172 270 L200 302"/>
+              <path d="M190 264 L222 306"/>
+              <path d="M210 262 L244 302"/>
+              <path d="M230 266 L258 296"/>
+            </g>
+            <circle cx="305" cy="300" r="9" fill="#D9502B"/>
+            <circle cx="322" cy="284" r="7" fill="#E8683A"/>
+            <circle cx="298" cy="278" r="6" fill="#D9502B"/>
+          </g>
+
+          <g fill="none" stroke="#F3EDE2" stroke-width="2" opacity="0.9">
+            <path d="M80 380 l14 -14 M80 394 l28 -28"/>
+            <path d="M370 400 l16 -16 M384 408 l30 -30"/>
+            <path d="M60 200 l10 -10 M60 212 l22 -22"/>
+          </g>
+
+          <rect x="20" y="0" width="14" height="14" fill="none" stroke="url(#emberBar)" stroke-width="2" transform="translate(410,40) rotate(45)"/>
+          <rect x="20" y="0" width="10" height="10" fill="none" stroke="#E8A33D" stroke-width="2" transform="translate(50,330) rotate(45)"/>
+        </svg>
+      </div>
+    </section>
+
+    <section class="panels">
+
+      <article class="panel">
+        <div class="panel-frame">
+          <div class="panel-inner">
+            <p class="quote-mark" aria-hidden="true">&ldquo;</p>
+            <p class="panel-body quote">
+              Everything here tastes like it was cooked by someone
+              obsessed with fire. The char, the smoke, the seasoning —
+              it's the kind of meal you're still thinking about two
+              days later.
+            </p>
+            <p class="panel-signature">— Priya N., Thursday regular</p>
+          </div>
         </div>
+      </article>
+
+      <article class="panel">
+        <div class="panel-frame">
+          <div class="panel-inner">
+            <h2 class="panel-title">Hours</h2>
+            <ul class="hours">
+              <li><span>Sunday</span><span class="dots"></span><span class="time">8am – 8pm</span></li>
+              <li><span>Monday</span><span class="dots"></span><span class="time">6am – 6pm</span></li>
+              <li><span>Tuesday</span><span class="dots"></span><span class="time">6am – 6pm</span></li>
+              <li><span>Wednesday</span><span class="dots"></span><span class="time">6am – 6pm</span></li>
+              <li><span>Thursday</span><span class="dots"></span><span class="time">6am – 10pm</span></li>
+              <li><span>Friday</span><span class="dots"></span><span class="time">6am – 10pm</span></li>
+              <li><span>Saturday</span><span class="dots"></span><span class="time">8am – 10pm</span></li>
+            </ul>
+          </div>
+        </div>
+      </article>
+
+      <article class="panel">
+        <div class="panel-frame">
+          <div class="panel-inner">
+            <h2 class="panel-title">Find Us</h2>
+            <p class="panel-body">212 Kiln Row<br>Ashport, Maine</p>
+            <p class="panel-note">Street parking on Kiln Row after 6pm.</p>
+          </div>
+        </div>
+      </article>
+
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <p>Ember &amp; Salt — cooked over fire, finished with restraint.</p>
+  </footer>
 
 </body>
 </html>
