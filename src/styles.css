@@ -7,7 +7,7 @@
    Salt:   #F3EDE2   warm mineral off-white
    Ash:    #A79A8C   muted secondary text on dark
    Iron:   #4A423A   cookware neutral
---------------------------------------------- */
+-------------------------*/
 
 :root{
   --char:  #1E1712;
@@ -15,6 +15,7 @@
   --ember: #FF6A3D;
   --gold:  #E8A33D;
   --salt:  #F3EDE2;
+  --paper: #FBF6EC;
   --ash:   #A79A8C;
   --iron:  #4A423A;
 
@@ -40,7 +41,7 @@ body{
   outline-offset: 3px;
 }
 
-/* -------------------- header -------------------- */
+/* header */
 
 .site-header{
   display: flex;
@@ -84,6 +85,8 @@ nav{
   color: var(--ash);
   letter-spacing: 0.02em;
   cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
   position: relative;
 }
 
@@ -113,7 +116,7 @@ nav{
   color: var(--salt);
 }
 
-/* -------------------- hero -------------------- */
+/* hero */
 
 .hero{
   display: grid;
@@ -153,6 +156,7 @@ nav{
 .cta{
   font-family: var(--body);
   font-weight: 600;
+  text-decoration: none;
   font-size: 0.95rem;
   color: var(--char);
   background: linear-gradient(90deg, var(--gold), var(--ember));
@@ -198,7 +202,7 @@ nav{
   html{ scroll-behavior: auto; }
 }
 
-/* -------------------- panels -------------------- */
+/* panels */
 
 .panels{
   background: var(--salt);
@@ -294,7 +298,7 @@ nav{
   padding-top: 1.25rem;
 }
 
-/* -------------------- footer -------------------- */
+/* footer */
 
 .site-footer{
   text-align: center;
@@ -303,7 +307,7 @@ nav{
   color: var(--ash);
 }
 
-/* -------------------- responsive -------------------- */
+/* responsive */
 
 @media (max-width: 880px){
   .hero{
@@ -318,4 +322,206 @@ nav{
 @media (max-width: 520px){
   .site-header{ flex-direction: column; gap: 1rem; align-items: flex-start; }
   nav{ gap: 1.25rem; }
+}
+
+
+/*Menu page*/
+
+.menu-hero{
+  text-align: center;
+  padding: clamp(2.5rem, 5vw, 3.5rem) 1.5rem clamp(2.5rem, 5vw, 3rem);
+}
+
+.menu-hero .eyebrow{ margin-bottom: 1.25rem; }
+
+.menu-badge-frame{
+  display: inline-block;
+  background: linear-gradient(155deg, var(--gold), var(--ember));
+  clip-path: polygon(4% 0%, 96% 0%, 100% 14%, 100% 86%, 96% 100%, 4% 100%, 0% 86%, 0% 14%);
+  padding: 3px;
+}
+
+.menu-badge-inner{
+  display: flex;
+  align-items: center;
+  gap: 1.1rem;
+  background: var(--coal);
+  clip-path: polygon(4% 0%, 96% 0%, 100% 14%, 100% 86%, 96% 100%, 4% 100%, 0% 86%, 0% 14%);
+  padding: 1.4rem clamp(2rem, 6vw, 3.5rem);
+}
+
+.menu-badge-inner h1{
+  font-family: var(--display);
+  font-weight: 700;
+  font-size: clamp(2.1rem, 5vw, 3rem);
+  margin: 0;
+  color: var(--salt);
+}
+
+.badge-icon svg{ width: 36px; height: 36px; display: block; }
+.flame-icon path{ fill: var(--ember); }
+.crystal-icon polygon{ fill: rgba(232,163,61,0.12); stroke: var(--gold); stroke-width: 1.6; }
+.crystal-icon path{ stroke: var(--gold); stroke-width: 1; opacity: 0.7; }
+.crystal-icon.small{ width: 16px; height: 16px; }
+
+.menu-intro{
+  max-width: 46ch;
+  margin: 1.75rem auto 0;
+  color: var(--ash);
+  font-size: 1rem;
+  line-height: 1.65;
+}
+
+.menu-content{
+  background: var(--salt);
+  color: var(--char);
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: clamp(2.5rem, 5vw, 4rem) clamp(1.5rem, 5vw, 4rem) clamp(1rem, 3vw, 2rem);
+}
+
+.menu-category{ margin-bottom: clamp(2.75rem, 6vw, 3.75rem); }
+.menu-category:last-child{ margin-bottom: 0; }
+
+.category-banner-frame{
+  background: linear-gradient(90deg, var(--gold), var(--ember));
+  clip-path: polygon(2% 0%, 98% 0%, 100% 22%, 100% 78%, 98% 100%, 2% 100%, 0% 78%, 0% 22%);
+  padding: 2.5px;
+  margin: 0 auto 1.75rem;
+  max-width: 420px;
+}
+
+.category-banner-inner{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  background: var(--salt);
+  clip-path: polygon(2% 0%, 98% 0%, 100% 22%, 100% 78%, 98% 100%, 2% 100%, 0% 78%, 0% 22%);
+  padding: 0.85rem 2rem;
+}
+
+.category-banner-inner h2{
+  font-family: var(--display);
+  font-weight: 600;
+  font-size: 1.4rem;
+  margin: 0;
+}
+
+.menu-items{
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.item-frame{
+  background: linear-gradient(155deg, var(--gold), var(--ember));
+  clip-path: polygon(2.5% 0%, 97.5% 0%, 100% 9%, 100% 91%, 97.5% 100%, 2.5% 100%, 0% 91%, 0% 9%);
+  padding: 2px;
+  transition: transform 0.2s ease;
+}
+
+.item-frame:hover{ transform: translateY(-3px); }
+
+.item-inner{
+  background: var(--paper);
+  clip-path: polygon(2.5% 0%, 97.5% 0%, 100% 9%, 100% 91%, 97.5% 100%, 2.5% 100%, 0% 91%, 0% 9%);
+  padding: clamp(1.5rem, 3vw, 2.25rem);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: clamp(1.25rem, 3vw, 2.5rem);
+}
+
+.item-text{ flex: 1; min-width: 0; }
+
+.item-text h3{
+  font-family: var(--display);
+  font-weight: 600;
+  font-size: 1.3rem;
+  margin: 0 0 0.6rem;
+}
+
+.item-desc{
+  color: var(--iron);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  max-width: 48ch;
+  margin: 0 0 1.1rem;
+}
+
+.item-price{
+  font-family: var(--mono);
+  font-weight: 700;
+  color: var(--ember);
+  font-size: 1.05rem;
+  margin: 0;
+}
+
+.item-photo{
+  flex-shrink: 0;
+  width: 110px;
+  height: 110px;
+  border: 1.5px dashed rgba(74,66,58,0.35);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  color: var(--ash);
+}
+
+.item-photo svg{ width: 26px; height: 26px; }
+
+.item-photo span{
+  font-family: var(--mono);
+  font-size: 0.62rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+@media (max-width: 620px){
+  .item-inner{ flex-direction: column; align-items: flex-start; }
+  .item-photo{ width: 100%; height: 130px; align-self: center; max-width: 220px; }
+}
+
+/* 
+   Contact page
+ */
+
+.staff-inner{ justify-content: flex-start; }
+
+.staff-role{
+  font-family: var(--mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ember);
+  margin: 0 0 1.1rem;
+}
+
+.staff-contacts{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.staff-contacts li{
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-family: var(--mono);
+  font-size: 0.9rem;
+  color: var(--iron);
+}
+
+.staff-contacts svg{
+  width: 15px;
+  height: 15px;
+  flex-shrink: 0;
+  color: var(--ash);
 }
